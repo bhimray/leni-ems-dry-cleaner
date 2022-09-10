@@ -1,0 +1,21 @@
+.us-nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background: #0890F1;
+    color: #FFFFFF;
+    padding: 36px 44px;
+    transition: 250ms;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.us-nav.scrolled {
+    background: #ffffff;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #D8DCDF;
+}
