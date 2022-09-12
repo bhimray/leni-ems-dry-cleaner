@@ -1,0 +1,15 @@
+.headlines{
+    position: relative;
+    background-color: #0890F1;
+    top:4.4rem;
+    padding:1rem;
+}
+.headlines-text{
+    font-family: "Josefin Slab";
+    font-size:3rem;
+    font-weight: bolder;
+    line-height: 3rem;
+    color:black;
+    background-color: #0890F1; 
+}
+

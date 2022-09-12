@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.stroke-text{
+  color:transparent;
+  font-family:'FoundersGrotesk';
+  -webkit-text-stroke-width:1px;
+  -webkit-text-stroke-color:white;
+}
