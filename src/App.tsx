@@ -22,6 +22,10 @@ function App() {
       <FAQ/>
       <Refer/>
       <Footer/>
+      <h1>hi</h1>
+      <h1>hi</h1>
+      <h1>hi</h1>
+      <h1>hi</h1>
     </div>
   );
 }

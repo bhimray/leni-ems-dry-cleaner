@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="940" height="788" viewBox="0 0 940 788" xml:space="preserve">
+<desc>Created with Fabric.js 3.5.0</desc>
+<defs>
+</defs>
+<rect x="0" y="0" width="100%" height="100%" fill="#4918f1"/>
+<g transform="matrix(5.39 0 0 4.5184 464.196 395.1083)" id="666355" clip-path="url(#CLIPPATH_1965)">
+<filter id="SVGID_1963" y="-62.4%" height="224.8%" x="-56.08%" width="212.16%">
+	<feGaussianBlur in="SourceAlpha" stdDeviation="17.5"/>
+	<feOffset dx="22" dy="32" result="oBlur"/>
+	<feFlood flood-color="rgb(0,0,0)" flood-opacity="1"/>
+	<feComposite in2="oBlur" operator="in"/>
+	<feMerge>
+		<feMergeNode/>
+		<feMergeNode in="SourceGraphic"/>
+	</feMerge>
+</filter>
+<clipPath id="CLIPPATH_1965">
+	<rect transform="matrix(1 0 0 1 0.0001 0.0002)" id="clip0_302_100" x="-79" y="-79" rx="0" ry="0" width="158" height="158"/>
+</clipPath>
+<path style="stroke: rgb(39,6,212); stroke-opacity: 0.02; stroke-width: 87; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: rgb(34,20,140); fill-opacity: 0.71; fill-rule: nonzero; opacity: 0.5;filter: url(#SVGID_1963);" vector-effect="non-scaling-stroke" transform=" translate(-78.9999, -78.9998)" d="M 154.685 0.000367219 H 3.31409 C 1.48378 0.000367219 0 1.48415 0 3.31478 V 154.686 C 0 156.516 1.48378 158 3.31409 158 H 154.685 C 156.515 158 157.999 156.516 157.999 154.686 V 3.31478 C 158 3.26912 158 3.22347 157.999 3.17813 C 157.962 1.38523 156.478 -0.0373614 154.685 0.000367219 Z" stroke-linecap="round"/>
+</g>
+<g transform="matrix(4.4747 0 0 3.9673 470.0022 366.0296)" id="936005" clip-path="url(#CLIPPATH_1966)">
+<filter id="SVGID_1964" y="-30.560000000000002%" height="161.12%" x="-27.59%" width="155.18%">
+	<feGaussianBlur in="SourceAlpha" stdDeviation="3.5"/>
+	<feOffset dx="5" dy="9" result="oBlur"/>
+	<feFlood flood-color="rgb(169,21,165)" flood-opacity="0.74"/>
+	<feComposite in2="oBlur" operator="in"/>
+	<feMerge>
+		<feMergeNode/>
+		<feMergeNode in="SourceGraphic"/>
+	</feMerge>
+</filter>
+<clipPath id="CLIPPATH_1966">
+	<rect transform="matrix(1 0 0 1 0.0001 0)" id="clip0_302_108" x="-79" y="-79.5" rx="0" ry="0" width="158" height="159"/>
+</clipPath>
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: rgb(41,36,75); fill-rule: nonzero; opacity: 1;filter: url(#SVGID_1964);" vector-effect="non-scaling-stroke" transform=" translate(-78.9999, -79.5)" d="M 157.845 61.3613 C 157.49 60.1413 156.463 59.2399 155.213 59.0527 L 104.608 51.5835 L 81.8687 5.41098 C 81.5847 4.94373 81.1941 4.55097 80.7298 4.26483 C 79.1088 3.26636 76.9904 3.77944 75.9985 5.41098 L 53.3946 51.5838 L 2.78904 59.0531 C 2.13243 59.1578 1.52263 59.4589 1.03872 59.9179 C -0.29031 61.1779 -0.352618 63.2837 0.899869 64.6212 L 37.5383 100.744 L 28.8341 151.467 C 28.6266 152.723 29.1507 153.989 30.1837 154.726 C 31.2521 155.418 32.6242 155.418 33.6923 154.726 L 78.9675 130.757 L 124.31 154.726 C 124.762 154.988 125.273 155.128 125.794 155.133 C 126.48 155.183 127.164 155.017 127.751 154.658 C 128.746 153.895 129.239 152.64 129.033 151.399 L 120.396 100.677 L 157.035 64.7571 C 157.907 63.8617 158.218 62.5568 157.845 61.3613 Z" stroke-linecap="round"/>
+</g>
+</svg>

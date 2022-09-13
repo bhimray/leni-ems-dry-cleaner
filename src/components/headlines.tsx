@@ -8,7 +8,7 @@ export default function Headlines (props: HeadlinesProps) {
 
   React.useEffect(()=>{
     if (window.innerWidth<500){
-      console.log(window.innerWidth)
+      // console.log(window.innerWidth)
       setUnderline(true);
     } else{
       setUnderline(false);
@@ -18,8 +18,9 @@ export default function Headlines (props: HeadlinesProps) {
   return (
     <div className='headlines'>
       <div className='headlines-text'>
-        <span className={underline?'stroke-text underline-text-mobile':'stroke-text underline-text'}> Laundry </span>
+        <span className={underline?'stroke-text underline-text-mobile':'stroke-text underline-text'}> Laundry</span>
         <span> and dry Cleaning...</span>
+        <br/><br/>
         <span  className={underline?'stroke-text underline-text-mobile':'stroke-text underline-text'}> Customer </span>
         <span> Oriented Service </span>
       </div>

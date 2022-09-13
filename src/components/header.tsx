@@ -1,11 +1,8 @@
 import * as React from 'react';
 import '../styles/header.css'
 import {motion, Variants, useAnimation} from "framer-motion"
-
 import menuUnfold from '../images/menu-unfold.svg'
 import Nav from './nav';
-
-
 
 const itemVariants: Variants = {
   open: {
@@ -25,17 +22,35 @@ export interface header {
 }
 
 export default function Header (props: header) {
-    const [scrolled, setScrolled] = React.useState(false)
-    const [menu, setMenu] = React.useState(true)
-
-    const changeScrollState=()=>{
-        if (window.scrollY>100){
-            setScrolled(true);
-        }
-        else if (window.scrollY<1){
-            setScrolled(false);
-        }
+  
+  const [scrolled, setScrolled] = React.useState(false)
+  const [menu, setMenu] = React.useState(true)
+  React.useEffect(()=>{
+    if (menu==false){
+      document.body.style.position='fixed'
+    }else{
+      document.body.style.position='relative'
     }
+    console.log('useEffect menu', menu)
+  }, [menu])
+  const seizeBody=()=>{
+    if (menu){
+      document.body.style.position='fixed'
+    }
+  }
+  const changeScrollState=(event:any)=>{
+    // console.log(event.currentTarget.scrollY)
+    if (window.scrollY>0 && menu==true){
+      // console.log('menu', menu)
+      // console.log("header SCROLLY",window.scrollY);
+      setScrolled(true);
+    }
+    else if (window.scrollY<=0){
+      // console.log('menufalse', menu)
+      setScrolled(false);
+    }
+  }
+  window.addEventListener("scroll", changeScrollState)
 
   const moveLogo = useAnimation()
   React.useEffect(() => {
@@ -44,7 +59,7 @@ export default function Header (props: header) {
     y:-2,
     transition: { type: "spring", stiffness: 300, duration: 0.5 },
   })
-  }, [])
+  }, [scrolled])
 
   const moveShadow = useAnimation()
   React.useEffect(() => {
@@ -53,16 +68,16 @@ export default function Header (props: header) {
     y:2,
     transition: { type: "spring", stiffness: 300, duration: 0.5 },
   })
-  }, [])
+  }, [scrolled])
 
 
 
   return (
-    <div className={scrolled? "us-nav scrolled":"us-nav"} onScroll={()=>changeScrollState()}>
+    <div className={scrolled? "us-nav scrolled":"us-nav"}>
       <div className="logo-wrapper">
         <motion.h1 animate={moveLogo} className='logo'>Leni Em's Dry Cleaner</motion.h1>
         <motion.div  animate={moveShadow}className='logo-shadow'></motion.div>
-        {menu ? <Nav onClick = {()=>setMenu(!menu)}/> :<img src={menuUnfold} onClick = {()=>setMenu(!menu)} className='menu'/>}
+        {menu ? <Nav onClick = {()=>{setMenu(!menu); console.log(menu,'inline menu true position')}}/> :<img src={menuUnfold} onClick = {()=>{setMenu(!menu); console.log(menu,'inline menu false position')}} className='menu'/>}
       </div>
       <motion.nav 
       initial={false}

@@ -4,7 +4,7 @@
 
 .stroke-text{
   color:transparent;
-  font-family:'Josefin Slab';
+  font-family:'Courier New', Courier, monospace;
   -webkit-text-stroke-width:1.5px;
   -webkit-text-stroke-color:black;
 }

@@ -1,0 +1,15 @@
+.review {
+    display:grid;
+    background-color: darkblue;
+    color:#FFD06D;
+    font-size:2rem;
+    font-family: 'FoundersGrotesk', sans-serif;
+    font-weight: normal;
+    position: relative;
+    top: 5rem;
+}
+
+.star{
+    width:1rem;
+    font-size:1rem;
+}

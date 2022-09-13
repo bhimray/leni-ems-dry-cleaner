@@ -5,11 +5,12 @@
     padding:1rem;
 }
 .headlines-text{
-    font-family: "Josefin Slab";
-    font-size:3rem;
+    font-family:'Courier New', Courier, monospace;
+    font-size:2.5rem;
     font-weight: bolder;
     line-height: 3rem;
-    color:black;
+    color:white;
     background-color: #0890F1; 
+    text-transform: uppercase;
 }
 
