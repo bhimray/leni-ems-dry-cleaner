@@ -1,15 +1,40 @@
 .review {
     display:grid;
+    text-align: center;
     background-color: darkblue;
-    color:#FFD06D;
-    font-size:2rem;
     font-family: 'FoundersGrotesk', sans-serif;
-    font-weight: normal;
     position: relative;
     top: 5rem;
+    gap:1rem;
+    padding:1rem 0rem;
+    color:#BAEBFF;
+    text-transform: uppercase;
+}
+.review-head{
+    color:#FFD06D;
+    font-size:1.5rem;
+    font-weight: 1000;
+    text-align: center;
 }
 
+.review-head-2{
+    font-size:0.7rem;
+    font-weight: 1000;
+    text-align: center;
+}
+.stars{
+    display:flex;
+    gap:0.5rem;
+    justify-content: center;
+}
 .star{
-    width:1rem;
+    width:3rem;
+    font-size:1rem;
+    border-radius: 10%;
+}
+
+.moreReview{
+
+    font-weight: 1000;
     font-size:1rem;
 }

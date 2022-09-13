@@ -8,16 +8,16 @@ export interface  ReviewProps {
 export default function Review (props:  ReviewProps) {
   return (
     <div className='review'>
-        <div>Ranked No.1 by customers</div>
-        <div>in categories Laundry service, dry cleaning</div>
-        <div>
+        <div className='review-head'>Ranked No.1 by customers</div>
+        <div className='review-head-2'>in categories Laundry service and dry cleaning</div>
+        <div className='stars'>
           <img src={fullStar} alt="rating" className='star'/>
           <img src={fullStar} alt="" className='star' />
           <img src={fullStar} alt="" className='star'/>
           <img src={fullStar} alt="" className='star'/>
           <img src={halfStar} alt="" className='star'/>
         </div>
-        <div></div>
+        <div className='moreReview'>Read more reviews</div>
     </div>
   );
 }
