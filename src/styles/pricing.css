@@ -1,0 +1,50 @@
+.pricing{
+    display:grid;
+    position: relative;
+    top:4rem;
+    background-color: #2FCCC0;
+}
+
+.price-head{
+    font-family: 'FoundersGrotesk', sans-serif;
+    font-size:2rem;
+    font-weight: 800;
+    display:flex;
+    text-align: center;
+}
+
+.card-container{
+    display:flex;
+    position: relative;
+    overflow-x: scroll;
+    flex:none;
+    flex-flow: row nowrap;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    scroll-snap-align: start;
+}
+
+.card{
+    position:relative;
+    background-color: #2FCCC0;
+}
+
+.card-saying{
+
+}
+
+.card-image{
+
+}
+
+.card-name{
+
+}
+
+.card-features{
+
+}
+
+.card-price{
+
+}
