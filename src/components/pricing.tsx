@@ -10,21 +10,32 @@ export default function Pricing (props:  PricingProps) {
       <div className='stroke-text price-head'>Affordable prices </div>
       <div className='price-head'>only for our Clients</div>
       <div className='card-container'>
-        {priceData.map((data, i)=>{
-          console.log('map data', data)
-          return(
-            <div className='card'>
-              <div className='card-saying'>{data.saying}</div>
-              <div className='card-image'>{data.image}</div>
-              <div className='card-name'>{data.name}</div>
-              <div className='card-features'>{data.features}</div>
-              <div className='card-price'>{data.price}</div>            
-            </div>
-          )
-        })}
+        <div className="card-container-inner">
+          {priceData.map((data, i)=>{
+            console.log('map data', data)
+            return(
+              <div key={i} className='card'>
+                <span className='card-saying'>{data.saying}</span>
+                <img src={data.image} alt="image" className='card-image'/>
+                <span className='card-name'>{data.name}</span>
+                <span className='card-features'>{data.features.map((feature, i)=>{
+                  return(
+                    <>
+                      <p key={i}>{feature}</p>
+                    </>
+                  )
+                })}</span>
+                <div className='card-price'>{data.price}</div>            
+              </div>
+            )
+          })}
+        </div>
       </div>
-      <div></div>
-      <div></div>
+      <div>
+      </div>
+      <div className='btn-div'>
+        <button className='priceButton btn'>See all prices</button>
+      </div>
     </div>
   );
 }

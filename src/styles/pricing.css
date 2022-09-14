@@ -1,15 +1,18 @@
-.pricing{
-    display:grid;
+.pricing {
+    display: grid;
     position: relative;
-    top:4rem;
+    top: 4rem;
     background-color: #2FCCC0;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
-
 .price-head{
     font-family: 'FoundersGrotesk', sans-serif;
     font-size:2rem;
     font-weight: 800;
     display:flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
@@ -18,33 +21,64 @@
     position: relative;
     overflow-x: scroll;
     flex:none;
-    flex-flow: row nowrap;
+    /* flex-flow: row nowrap; */
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
     scroll-snap-align: start;
+    gap:1.5rem;
+    justify-content: flex-start;
+    align-items: center;
+    scroll-behavior: smooth;
+}
+.card-container::-webkit-scrollbar{
+    display:none;
+}
+.card-container-inner{
+    display:flex;
 }
 
-.card{
-    position:relative;
-    background-color: #2FCCC0;
+.card {
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    padding: 16px 0px 40px 0px;
+    width: 17rem;
+    margin: 2rem;
 }
-
 .card-saying{
-
+    display:inline;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color:blue;
+    padding-bottom:1rem;
 }
 
 .card-image{
-
+    width:5rem;
+    border:0.5rem solid darkblue;
+    border-radius:51%;
 }
 
-.card-name{
-
+.card-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: chartreuse;
 }
 
-.card-features{
-
+.card-features {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #465e68;
 }
 
 .card-price{
-
+    color:black;
+    font-size: 1.2rem;
+    font-weight: 1000;
+}
+.btn-div{
+    display:flex;
+    justify-content: center;
 }

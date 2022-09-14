@@ -1,13 +1,13 @@
 .review {
-    display:grid;
+    display: grid;
     text-align: center;
     background-color: darkblue;
     font-family: 'FoundersGrotesk', sans-serif;
     position: relative;
     top: 4rem;
-    gap:1rem;
-    padding:1rem 0rem;
-    color:#BAEBFF;
+    gap: 2rem;
+    padding: 4rem 0rem;
+    color: #BAEBFF;
     text-transform: uppercase;
 }
 .review-head{
@@ -17,8 +17,8 @@
     text-align: center;
 }
 
-.review-head-2{
-    font-size:0.7rem;
+.review-head-2 {
+    font-size: 1rem;
     font-weight: 1000;
     text-align: center;
 }
@@ -34,7 +34,6 @@
 }
 
 .moreReview{
-
     font-weight: 1000;
     font-size:1rem;
 }
