@@ -4,3 +4,11 @@
     top: 4rem;
     padding-top: 2rem;
 }
+.googleReview{
+    position:relative;
+}
+.more-reviews-btn{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

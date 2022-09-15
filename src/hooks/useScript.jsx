@@ -1,17 +1,13 @@
 import { useEffect } from 'react';
 
-const useScript = url => {
+const useScript =(url, id) => {
   useEffect(() => {
     const script = document.createElement('script');
-    console.log("create element", script)
     script.src = url;
-    console.log("url", script)
     script.async = true;
-
-    document.body.appendChild(script);
-
+    document.getElementById(id).appendChild(script)
     return () => {
-      document.body.removeChild(script);
+      document.getElementById(id).removeChild(script);
     }
   }, [url]);
 };
