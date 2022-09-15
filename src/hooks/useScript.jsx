@@ -9,7 +9,7 @@ const useScript =(url, id) => {
     return () => {
       document.getElementById(id).removeChild(script);
     }
-  }, [url]);
+  }, []);
 };
 
 export default useScript;

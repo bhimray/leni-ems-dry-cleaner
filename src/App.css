@@ -4,9 +4,9 @@
 
 .stroke-text{
   color:transparent;
-  font-family:'Courier New', Courier, monospace;
   -webkit-text-stroke-width:1.5px;
-  -webkit-text-stroke-color:black;
+  -webkit-text-stroke-color:rgb(45, 43, 33);
+  font-size: larger;
 }
 
 .underline-text{
@@ -16,7 +16,7 @@
   overflow: hidden;
 }
 .underline-text-mobile {
-  box-shadow: inset 0 -20px 0 rgba(238, 250, 16, 0.468), 0 2px 0 rgba(50,85,127,0.5);
+  box-shadow: inset 0 -10px 0 rgba(238, 250, 16, 0.468), 0 2px 0 rgba(50,85,127,0.5);
 }
 
 .underline-text:hover {

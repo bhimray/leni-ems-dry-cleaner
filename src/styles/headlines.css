@@ -5,12 +5,9 @@
     padding:1rem;
 }
 .headlines-text{
-    font-family:'Courier New', Courier, monospace;
-    font-size:2.5rem;
-    font-weight: bolder;
-    line-height: 3rem;
-    color:white;
-    background-color: #0890F1; 
-    text-transform: uppercase;
+    color: #FFD06D;
+    font-size: 2rem;
+    font-weight: 1000;
+    text-align: center;
 }
 

@@ -2,7 +2,23 @@
     position: relative;
     background-color: rgb(219 215 215);
     top: 4rem;
-    padding-top: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    
+}
+.review-head-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.customer-review-head{
+    font-size:2rem;
+    font-weight: 700;
+}
+.customer-review-headline{
+    font-weight: 500;
 }
 .googleReview{
     position:relative;
