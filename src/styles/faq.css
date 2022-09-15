@@ -1,7 +1,47 @@
 .faq{
+    display: grid;
+    justify-content: center;
+    align-items: center;
     position:relative;
     top:4rem;
     background-color: whitesmoke;
     padding-top:2rem;
     padding-bottom:2rem;
+    
+}
+
+.faq-head{
+    font-size: 1rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.faq-questions{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq-card {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    /* padding: 2rem; */
+    background-color: ivory;
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.faq-question{
+    font-size: medium;
+    font-weight: 600;
+    padding-bottom: 1rem;
+
+}
+
+.faq-answer{
+    background-color: whitesmoke;
+    padding:0.5rem;
+    border-radius:0.5rem;
 }
