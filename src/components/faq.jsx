@@ -50,10 +50,14 @@ export default function FAQ (){
       <div className='faq-questions'>
         {
           questionData.map((data, i)=>{
+            const alterAnswer= `answer${i}`
+
+            console.log(state[alterAnswer], typeof(alterAnswer), "show and hide the answer")
             return(
               <div className='faq-card'>
                 <div className='faq-question' onClick={() => dispatch({type: `answer${i}`})}>{data.question}</div>
-               </div>
+                <div className={state[alterAnswer]?'faq-answer-show':'faq-answer-hide'}>{data.answer}</div>
+              </div>
             )
           })
         }

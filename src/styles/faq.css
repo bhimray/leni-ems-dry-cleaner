@@ -39,8 +39,10 @@
     padding-bottom: 1rem;
 
 }
-
-.faq-answer{
+.faq-answer-hide{
+    display:none;
+}
+.faq-answer-show{
     background-color: whitesmoke;
     padding:0.5rem;
     border-radius:0.5rem;
