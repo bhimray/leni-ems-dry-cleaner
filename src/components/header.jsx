@@ -5,7 +5,7 @@ import menuUnfold from '../images/menu-unfold.svg'
 import Nav from './nav';
 import {NavLink} from 'react-router-dom'
 
-const itemVariants: Variants = {
+const itemVariants={
   open: {
     opacity: 1,
     y: 0,
@@ -19,8 +19,57 @@ const itemVariants: Variants = {
 };
 
 
-export interface header {
- 
+const myRef1 = React.createRef();
+const myRef2 = React.createRef();
+const myRef3 = React.createRef();
+const myRef4 = React.createRef();
+const myRef5 = React.createRef();
+const myRef6 = React.createRef();
+const myRef7 = React.createRef();
+const myRef8 = React.createRef();
+
+ const scrollSmooth=(e, scroll)=>{
+ if (scroll == "about") {
+   myRef1.current.scrollIntoView({
+     behavior: "smooth",
+     block: "start"
+   });
+ } else if (scroll == "pricing") {
+   myRef2.current.scrollIntoView({
+     behavior: "smooth",
+     block: "start"
+   });
+ } else if (scroll == "whyus") {
+   myRef3.current.scrollIntoView({
+     behavior: "smooth",
+     block: "start"
+   });
+ } else if (scroll == "faq") {
+   myRef4.current.scrollIntoView({
+     behavior: "smooth",
+     block: "start"
+   });
+ }else if (scroll === "headlines") {
+   myRef5.current.scrollIntoView({
+     behavior: "smooth",
+     block: "start"
+   });
+ }else if (scroll === "header") {
+   myRef6.current.scrollIntoView({
+     behavior: "smooth",
+     block: "start"
+   });
+ }else if (scroll === "review") {
+   myRef7.current.scrollIntoView({
+     behavior: "smooth",
+     block: "start"
+   });
+ }else if (scroll === "footer") {
+   myRef8.current.scrollIntoView({
+     behavior: "smooth",
+     block: "start"
+   });
+ }
 }
 
 export default function Header (props: header) {
@@ -108,10 +157,10 @@ export default function Header (props: header) {
           }
         }}
         className={menu? "no-drop-down":"drop-down"}>
-          <motion.li variants={itemVariants}>About</motion.li>
-          <motion.li variants={itemVariants}>Pricing</motion.li>
-          <motion.li variants={itemVariants}>Why Us?</motion.li>
-          <motion.li variants={itemVariants}>FAQ</motion.li>
+          <motion.li variants={itemVariants} ref={myRef1} onClick={e => [scrollSmooth(e, "about"), setMenu(!menu)]}>About</motion.li>
+          <motion.li variants={itemVariants} ref={myRef2} onClick={e => [scrollSmooth(e, "pricing"), setMenu(!menu)]}>Pricing</motion.li>
+          <motion.li variants={itemVariants} ref={myRef3} onClick={e => [scrollSmooth(e, "whyus"), setMenu(!menu)]}>Why Us?</motion.li>
+          <motion.li variants={itemVariants} ref={myRef4} onClick={e => [scrollSmooth(e, "faq"), setMenu(!menu)]}>FAQ</motion.li>
         </motion.ul>
       </motion.nav> 
     </div>
