@@ -81,12 +81,7 @@ import Whyus from './components/why-us';
 // export default Scroll;
 
 
-<<<<<<< HEAD
 function App() {
-
-
-
-
  const myRef1 = React.createRef();
  const myRef2 = React.createRef();
  const myRef3 = React.createRef();
@@ -121,8 +116,6 @@ function App() {
   }
 }
 
-=======
->>>>>>> feac6ea9a7d4ec24ee92ab66a9540f6d780ad61c
 function App() {
 
   const [underline, setUnderline] = React.useState(false)
