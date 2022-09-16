@@ -3,6 +3,7 @@ import '../styles/header.css'
 import {motion, Variants, useAnimation} from "framer-motion"
 import menuUnfold from '../images/menu-unfold.svg'
 import Nav from './nav';
+import {NavLink} from 'react-router-dom'
 
 const itemVariants: Variants = {
   open: {
@@ -19,6 +20,7 @@ const itemVariants: Variants = {
 
 
 export interface header {
+ 
 }
 
 export default function Header (props: header) {
@@ -74,6 +76,7 @@ export default function Header (props: header) {
 
   return (
     <div className={scrolled? "us-nav scrolled":"us-nav"}>
+      
       <div className="logo-wrapper">
         <motion.h1 animate={moveLogo} className='logo'>Leni Em's Dry Cleaner</motion.h1>
         <motion.div  animate={moveShadow}className='logo-shadow'></motion.div>

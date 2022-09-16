@@ -42,6 +42,7 @@
 }
 .faq-answer-hide{
     background-color:blue;
+    
 }
 .faq-answer-show{
     display: grid;
