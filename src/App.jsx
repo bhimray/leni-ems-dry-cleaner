@@ -79,8 +79,44 @@ import Whyus from './components/why-us';
 // }
 
 // export default Scroll;
-function App() {
 
+
+
+ const myRef1 = React.createRef();
+ const myRef2 = React.createRef();
+ const myRef3 = React.createRef();
+ const myRef4 = React.createRef();
+
+  scrollSmooth(e, scroll) {
+  if (scroll === "header") {
+    myRef1.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  } else if (scroll === "headlines") {
+    myRef2.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  } else if (scroll === "review") {
+    myRef3.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  } else if (scroll === "about") {
+    myRef4.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  }else if (scroll === "pricing") {
+    myRef4.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  }
+}
+
+function App() {
 
   const [underline, setUnderline] = React.useState(false)
 
@@ -97,14 +133,14 @@ function App() {
   return (
     <BrowserRouter className="App">
       <Routes>
-        <Route path="/" element={<Header />}/>
-        <Route path="/headlines" element={ <Headlines/>}/>
-        <Route path="/review" element={<Review/>}/>
-        <Route path="/about" element={<About/>}/>
-        <Route path="/pricing" element={<Pricing/>}/>
-        <Route path="/whyus" element={<Whyus/>}/>
-        <Route path="/faq" element={<FAQ/>}/>
-        <Route path="/footer" element={<Footer/>}/>
+        <Route path="/" element={<Header onClick={e => scrollSmooth(e, "header")}/>}/>
+        <Route path="/headlines" element={ <Headlines nClick={e => scrollSmooth(e, "headlines")}/>}/>
+        <Route path="/review" element={<Review onClick={e => scrollSmooth(e, "review")}/>}/>
+        <Route path="/about" element={<About onClick={e => scrollSmooth(e, "about")}/>}/>
+        <Route path="/pricing" element={<Pricing onClick={e => scrollSmooth(e, "pricing")}/>}/>
+        <Route path="/whyus" element={<Whyus onClick={e => scrollSmooth(e, "whyus")}/>}/>
+        <Route path="/faq" element={<FAQ onClick={e =>scrollSmooth(e, "faq")}/>}/>
+        <Route path="/footer" element={<Footer onClick={e => scrollSmooth(e, "footer")}/>}/>
       </Routes>
     </BrowserRouter>
   );
