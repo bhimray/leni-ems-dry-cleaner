@@ -4,9 +4,10 @@ import '../styles/faq.css'
 
 
 const multiObject={};
-  const multipleAnswer=(()=>questionData.map((data,i)=>{
-    multiObject[`answer${i}`]= false;
-  })
+const multipleAnswer=(()=>questionData.map((data,i)=>{
+  multiObject[`answer${i}`]= false;
+  console.log("multipleAnswer", multiObject)
+})
 );
 multipleAnswer();
 console.log("mulitobjectKeys", typeof(multiObject["answer0"]))
@@ -17,7 +18,7 @@ const otherAnswer=(actionType)=>{
 
   Object.entries(tempObject).map(item => {
     // console.log("tempObject",item)
-    if (item[1]== true){
+    if (item[1]=== true){
       tempObject[item[0]] = !item[1]
     }
     // console.log("changed tempObject", tempObject)
@@ -42,8 +43,7 @@ function reducer(state, action) {
 export default function FAQ (){
   console.log(multiObject, "before useReducer")
   const [state, dispatch] = React.useReducer(reducer, multiObject);
-  console.log(state.answer0);
-  console.log(state.answer1);
+  console.log("state",state);
   return (
     <div className='faq'>
       <div className='faq-head'>Frequently Asked Questions</div>
@@ -51,18 +51,18 @@ export default function FAQ (){
         {
           questionData.map((data, i)=>{
             const alterAnswer= `answer${i}`
-
-            console.log(state[alterAnswer], typeof(alterAnswer), "show and hide the answer")
+            const boolValue = state[alterAnswer]
+            console.log(state[alterAnswer],`true or false for ${i} times`)
             return(
-              <div className='faq-card'>
-                <div className='faq-question' onClick={() => dispatch({type: `answer${i}`})}>{data.question}</div>
-                <div className={state[alterAnswer]?'faq-answer-show':'faq-answer-hide'}>{data.answer}</div>
+              <div className='faq-card' key={i} onClick={() =>dispatch({type: `answer${i}`})}>
+                <div className={'faq-question'}>{data.question}</div>
+                {console.log("inside return", typeof(boolValue))}
+                <div className={boolValue ? "faq-answer-show" : "faq-answer-show faq-answer-hide"} key={i}>{data.answer}</div>
               </div>
             )
           })
         }
       </div>
-      <div>Ask question</div>
     </div>
   );
 };

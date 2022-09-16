@@ -5,13 +5,13 @@
     position:relative;
     top:4rem;
     background-color: whitesmoke;
-    padding-top:2rem;
+    padding-top:6rem;
     padding-bottom:2rem;
     
 }
 
 .faq-head{
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 800;
     text-align: center;
 }
@@ -20,6 +20,7 @@
     display: grid;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
 }
 
 .faq-card {
@@ -40,10 +41,18 @@
 
 }
 .faq-answer-hide{
-    display:none;
+    background-color:blue;
 }
 .faq-answer-show{
+    display: grid;
     background-color: whitesmoke;
     padding:0.5rem;
     border-radius:0.5rem;
+}
+
+@media only screen and (min-width: 700px) {
+    .faq-card{
+        justify-content: flex-start;
+    }
+    
 }

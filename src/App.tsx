@@ -10,6 +10,7 @@ import Refer from './components/refer';
 import Review from './components/review';
 import Whyus from './components/why-us';
 
+
 function App() {
   return (
     <div className="App">
@@ -20,12 +21,7 @@ function App() {
       <Pricing/>
       <Whyus/>
       <FAQ/>
-      <Refer/>
       <Footer/>
-      <h1>hi</h1>
-      <h1>hi</h1>
-      <h1>hi</h1>
-      <h1>hi</h1>
     </div>
   );
 }

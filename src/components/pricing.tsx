@@ -1,6 +1,7 @@
 import * as React from 'react';
 import '../styles/pricing.css'
 import { priceData } from '../data/card';
+import {motion} from 'framer-motion'
 export interface  PricingProps {
 }
 
@@ -14,7 +15,12 @@ export default function Pricing (props:  PricingProps) {
           {priceData.map((data, i)=>{
             console.log('map data', data)
             return(
-              <div key={i} className='card'>
+              <motion.div 
+              whileHover={{
+                scale: 1.1,
+                transition: { duration: 0.2 },
+              }}
+              key={i} className='card'>
                 <span className='card-saying'>{data.saying}</span>
                 <img src={data.image} alt="image" className='card-image'/>
                 <span className='card-name'>{data.name}</span>
@@ -26,7 +32,7 @@ export default function Pricing (props:  PricingProps) {
                   )
                 })}</span>
                 <div className='card-price'>{data.price}</div>            
-              </div>
+              </motion.div>
             )
           })}
         </div>
