@@ -29,7 +29,7 @@ const myRef7 = React.createRef();
 const myRef8 = React.createRef();
 
  const scrollSmooth=(e, scroll)=>{
- if (scroll == "about") {
+ if (scroll === "about") {
    myRef1.current.scrollIntoView({
      behavior: "smooth",
      block: "start"
