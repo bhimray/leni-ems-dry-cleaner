@@ -80,49 +80,6 @@ import Whyus from './components/why-us';
 
 // export default Scroll;
 
-
-<<<<<<< HEAD
-function App() {
-
-
-
-
- const myRef1 = React.createRef();
- const myRef2 = React.createRef();
- const myRef3 = React.createRef();
- const myRef4 = React.createRef();
-
-  scrollSmooth(e, scroll) {
-  if (scroll === "header") {
-    myRef1.current.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-  } else if (scroll === "headlines") {
-    myRef2.current.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-  } else if (scroll === "review") {
-    myRef3.current.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-  } else if (scroll === "about") {
-    myRef4.current.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-  }else if (scroll === "pricing") {
-    myRef4.current.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-  }
-}
-
-=======
->>>>>>> feac6ea9a7d4ec24ee92ab66a9540f6d780ad61c
 function App() {
 
   const [underline, setUnderline] = React.useState(false)
