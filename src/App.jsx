@@ -81,6 +81,7 @@ import Whyus from './components/why-us';
 // export default Scroll;
 
 
+<<<<<<< HEAD
 function App() {
 
 
@@ -120,6 +121,8 @@ function App() {
   }
 }
 
+=======
+>>>>>>> feac6ea9a7d4ec24ee92ab66a9540f6d780ad61c
 function App() {
 
   const [underline, setUnderline] = React.useState(false)
@@ -135,18 +138,16 @@ function App() {
   console.log("app underline", underline)
 
   return (
-    <BrowserRouter className="App">
-      <Routes>
-        <Route path="/" element={<Header />}/>
-        <Route path="/headlines" element={ <Headlines/>}/>
-        <Route path="/review" element={<Review/>}/>
-        <Route path="/about" element={<About/>}/>
-        <Route path="/pricing" element={<Pricing/>}/>
-        <Route path="/whyus" element={<Whyus/>}/>
-        <Route path="/faq" element={<FAQ/>}/>
-        <Route path="/footer" element={<Footer/>}/>
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <Header/>
+      <Headlines/>
+      <Review/>
+      <About/>
+      <Pricing/>
+      <Whyus/>
+      <FAQ/>
+      <Footer/>
+    </div>
   );
 }
 
