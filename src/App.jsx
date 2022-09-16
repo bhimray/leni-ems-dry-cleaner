@@ -79,11 +79,10 @@ import Whyus from './components/why-us';
 // }
 
 // export default Scroll;
-<<<<<<< HEAD
+
 
 function App() {
-=======
->>>>>>> b4fce829b98adf726b647ca798afd1c87299baf2
+
 
 
 
