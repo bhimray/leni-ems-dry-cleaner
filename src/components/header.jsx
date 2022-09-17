@@ -3,7 +3,14 @@ import '../styles/header.css'
 import {motion, Variants, useAnimation} from "framer-motion"
 import menuUnfold from '../images/menu-unfold.svg'
 import Nav from './nav';
-import {NavLink} from 'react-router-dom'
+import About from './about';
+import FAQ from './faq';
+import Footer from './footer';
+import Headlines from './headlines';
+import Pricing from './pricing';
+import Review from './review';
+import Whyus from './why-us';
+  
 
 const itemVariants={
   open: {
@@ -28,7 +35,7 @@ const myRef6 = React.createRef();
 const myRef7 = React.createRef();
 const myRef8 = React.createRef();
 
- const scrollSmooth=(e, scroll)=>{
+ const scrollSmooth=(scroll)=>{
  if (scroll === "about") {
    myRef1.current.scrollIntoView({
      behavior: "smooth",
@@ -47,7 +54,6 @@ const myRef8 = React.createRef();
  } else if (scroll == "faq") {
    myRef4.current.scrollIntoView({
      behavior: "smooth",
-     block: "start"
    });
  }else if (scroll === "headlines") {
    myRef5.current.scrollIntoView({
@@ -72,7 +78,7 @@ const myRef8 = React.createRef();
  }
 }
 
-export default function Header (props: header) {
+export default function Header () {
   
   const [scrolled, setScrolled] = React.useState(false)
   const [menu, setMenu] = React.useState(true)
@@ -84,12 +90,14 @@ export default function Header (props: header) {
     }
     console.log('useEffect menu', menu)
   }, [menu])
-  const seizeBody=()=>{
-    if (menu){
-      document.body.style.position='fixed'
-    }
-  }
-  const changeScrollState=(event:any)=>{
+
+  // const seizeBody=()=>{
+  //   if (menu){
+  //     document.body.style.position='fixed'
+  //   }
+  // }
+
+  const changeScrollState=(event)=>{
     // console.log(event.currentTarget.scrollY)
     if (window.scrollY>0 && menu==true){
       // console.log('menu', menu)
@@ -121,48 +129,67 @@ export default function Header (props: header) {
   })
   }, [scrolled])
 
-
-
   return (
-    <div className={scrolled? "us-nav scrolled":"us-nav"}>
-      
-      <div className="logo-wrapper">
-        <motion.h1 animate={moveLogo} className='logo'>Leni Em's Dry Cleaner</motion.h1>
-        <motion.div  animate={moveShadow}className='logo-shadow'></motion.div>
-        {menu ? <Nav onClick = {()=>{setMenu(!menu); console.log(menu,'inline menu true position')}}/> :<img src={menuUnfold} onClick = {()=>{setMenu(!menu); console.log(menu,'inline menu false position')}} className='menu'/>}
+    <>
+      <div className={scrolled? "us-nav scrolled":"us-nav"}>
+        <div className="logo-wrapper">
+          <motion.h1 animate={moveLogo} className='logo'>Leni Em's Dry Cleaner</motion.h1>
+          <motion.div  animate={moveShadow}className='logo-shadow'></motion.div>
+          {menu ? <Nav onClick = {()=>{setMenu(!menu); console.log(menu,'inline menu true position')}}/> :<img src={menuUnfold} onClick = {()=>{setMenu(!menu); console.log(menu,'inline menu false position')}} className='menu'/>}
+        </div>
+        <motion.nav 
+        initial={false}
+        animate={menu? 'closed':'open'}
+        className='nav'>
+          <motion.ul 
+          variants={{
+            open:{
+              y:100,
+              transition:{
+                type: "spring",
+                bounce: 0.1,
+                duration: 1,
+                delayChildren: 0.5,
+                staggerChildren: 0.1
+              }
+            },
+            closed:{
+              y:-100,
+              transition:{
+                type: "spring",
+                bounce: 0.2,
+                duration: 1
+              }
+            }
+          }}
+          className={menu? "no-drop-down":"drop-down"}>
+            <motion.li variants={itemVariants}  onClick={()=> {
+              scrollSmooth('about')
+              setMenu(!menu)
+            }
+            }>About</motion.li>
+            <motion.li variants={itemVariants}  onClick={()=> {
+              scrollSmooth('pricing')
+              setMenu(!menu)
+            }}>Pricing</motion.li>
+            <motion.li variants={itemVariants}   onClick={()=> {
+              scrollSmooth('whyus')
+              setMenu(!menu)
+            }}>Why Us?</motion.li>
+            <motion.li variants={itemVariants}   onClick={()=> {
+              scrollSmooth('faq')
+              setMenu(!menu)
+            }}>FAQ</motion.li>
+          </motion.ul>
+        </motion.nav> 
       </div>
-      <motion.nav 
-      initial={false}
-      animate={menu? 'closed':'open'}
-      className='nav'>
-        <motion.ul 
-        variants={{
-          open:{
-            y:100,
-            transition:{
-              type: "spring",
-              bounce: 0.1,
-              duration: 1,
-              delayChildren: 0.5,
-              staggerChildren: 0.1
-            }
-          },
-          closed:{
-            y:-100,
-            transition:{
-              type: "spring",
-              bounce: 0.2,
-              duration: 1
-            }
-          }
-        }}
-        className={menu? "no-drop-down":"drop-down"}>
-          <motion.li variants={itemVariants} ref={myRef1} onClick={e => [scrollSmooth(e, "about"), setMenu(!menu)]}>About</motion.li>
-          <motion.li variants={itemVariants} ref={myRef2} onClick={e => [scrollSmooth(e, "pricing"), setMenu(!menu)]}>Pricing</motion.li>
-          <motion.li variants={itemVariants} ref={myRef3} onClick={e => [scrollSmooth(e, "whyus"), setMenu(!menu)]}>Why Us?</motion.li>
-          <motion.li variants={itemVariants} ref={myRef4} onClick={e => [scrollSmooth(e, "faq"), setMenu(!menu)]}>FAQ</motion.li>
-        </motion.ul>
-      </motion.nav> 
-    </div>
+      <Headlines/>
+      <Review/>
+      <About ref={myRef1}/>
+      <Pricing ref={myRef2}/>
+      <Whyus ref={myRef3}/>
+      <FAQ ref={myRef4}/>
+      <Footer/>
+    </>
   );
 }

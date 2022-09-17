@@ -1,15 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import About from './components/about';
-import FAQ from './components/faq';
-import Footer from './components/footer';
-import Header from './components/header';
-import Headlines from './components/headlines';
-import Pricing from './components/pricing';
-import Review from './components/review';
-import Whyus from './components/why-us';
-  
+import Header from './components/header'
 
 // class Scroll extends React.Component {
 //   constructor(props) {
@@ -97,13 +88,6 @@ function App() {
   return (
     <div>
       <Header/>
-      <Headlines/>
-      <Review/>
-      <About/>
-      <Pricing/>
-      <Whyus/>
-      <FAQ/>
-      <Footer/>
     </div>
   );
 }
