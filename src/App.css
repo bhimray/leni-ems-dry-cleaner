@@ -49,3 +49,10 @@
   color:rgb(219, 215, 215);
   box-shadow: 0px 0px 6px 0px #5100ff;
 }
+
+.messenger{
+  position:fixed;
+  bottom:0rem;
+  left:0rem;
+
+}

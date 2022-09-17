@@ -39,13 +39,13 @@ function reducer(state, action) {
       throw new Error();
   }
 }
-const myRef= React.createRef()//always create outside the function
+// const myRef= React.createRef()//always create outside the function
 
-const FAQ = (myRef4)=>{
+const FAQ = ()=>{
   console.log(multiObject, "before useReducer")
   const [state, dispatch] = React.useReducer(reducer, multiObject);
   // console.log("state",state);
-  console.log("myRef4", myRef4.refe)
+  // console.log("myRef4", myRef4.refe)
   
   
   return (

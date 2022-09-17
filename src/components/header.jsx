@@ -27,14 +27,14 @@ const itemVariants={
 };
 
 
-const myRef1 = React.createRef();
-const myRef2 = React.createRef();
-const myRef3 = React.createRef();
-// const myRef4 = React.createRef();
-const myRef5 = React.createRef();
-const myRef6 = React.createRef();
-const myRef7 = React.createRef();
-const myRef8 = React.createRef();
+// const myRef1 = React.createRef();
+// const myRef2 = React.createRef();
+// const myRef3 = React.createRef();
+// // const myRef4 = React.createRef();
+// const myRef5 = React.createRef();
+// const myRef6 = React.createRef();
+// const myRef7 = React.createRef();
+// const myRef8 = React.createRef();
 
 export default function Header () {
   const [myRef4, setMyRef4] = React.useState(false)
@@ -134,14 +134,17 @@ export default function Header () {
             <Link to="faq-head"  smooth={true} offset={200}><motion.li variants={itemVariants}   onClick={(e)=> {
               setMenu(!menu)
             }}>FAQ</motion.li></Link>
+            <Link to="pageFooter"  smooth={true} offset={200}><motion.li variants={itemVariants}   onClick={(e)=> {
+              setMenu(!menu)
+            }}>Contact Us</motion.li></Link>
           </motion.ul>
         </motion.nav> 
       </div>
       <Headlines/>
       <Review/>
-      <div id="about" ><About/></div>
-      <div id="pricing"><Pricing/></div>
-      <Whyus id="whyus"/>
+      <About/>
+      <Pricing/>
+      <Whyus/>
       <FAQ/>
       <Footer/>
     </>

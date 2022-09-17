@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from './components/header'
+import MessengerChat from './components/messenger-chat';
 
 // class Scroll extends React.Component {
 //   constructor(props) {
@@ -88,6 +89,7 @@ function App() {
   return (
     <div>
       <Header/>
+      <MessengerChat/>
     </div>
   );
 }
