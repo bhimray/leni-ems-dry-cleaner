@@ -43,7 +43,7 @@ function reducer(state, action) {
 const FAQ = (myRef4)=>{
   console.log(multiObject, "before useReducer")
   const [state, dispatch] = React.useReducer(reducer, multiObject);
-  console.log("state",state);
+  // console.log("state",state);
   console.log("myRef4", myRef4.refe)
   const myRef= React.createRef()
   if (myRef4.refe == true){
