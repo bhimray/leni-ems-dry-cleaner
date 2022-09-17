@@ -1,6 +1,6 @@
 import * as React from 'react';
 import '../styles/header.css'
-import {motion, Variants, useAnimation} from "framer-motion"
+import {motion, useAnimation} from "framer-motion"
 import menuUnfold from '../images/menu-unfold.svg'
 import Nav from './nav';
 import About from './about';
@@ -29,57 +29,14 @@ const itemVariants={
 const myRef1 = React.createRef();
 const myRef2 = React.createRef();
 const myRef3 = React.createRef();
-const myRef4 = React.createRef();
+// const myRef4 = React.createRef();
 const myRef5 = React.createRef();
 const myRef6 = React.createRef();
 const myRef7 = React.createRef();
 const myRef8 = React.createRef();
 
- const scrollSmooth=(scroll)=>{
- if (scroll === "about") {
-   myRef1.current.scrollIntoView({
-     behavior: "smooth",
-     block: "start"
-   });
- } else if (scroll == "pricing") {
-   myRef2.current.scrollIntoView({
-     behavior: "smooth",
-     block: "start"
-   });
- } else if (scroll == "whyus") {
-   myRef3.current.scrollIntoView({
-     behavior: "smooth",
-     block: "start"
-   });
- } else if (scroll == "faq") {
-   myRef4.current.scrollIntoView({
-     behavior: "smooth",
-   });
- }else if (scroll === "headlines") {
-   myRef5.current.scrollIntoView({
-     behavior: "smooth",
-     block: "start"
-   });
- }else if (scroll === "header") {
-   myRef6.current.scrollIntoView({
-     behavior: "smooth",
-     block: "start"
-   });
- }else if (scroll === "review") {
-   myRef7.current.scrollIntoView({
-     behavior: "smooth",
-     block: "start"
-   });
- }else if (scroll === "footer") {
-   myRef8.current.scrollIntoView({
-     behavior: "smooth",
-     block: "start"
-   });
- }
-}
-
 export default function Header () {
-  
+  const [myRef4, setMyRef4] = React.useState(false)
   const [scrolled, setScrolled] = React.useState(false)
   const [menu, setMenu] = React.useState(true)
   React.useEffect(()=>{
@@ -163,21 +120,21 @@ export default function Header () {
             }
           }}
           className={menu? "no-drop-down":"drop-down"}>
-            <motion.li variants={itemVariants}  onClick={()=> {
-              scrollSmooth('about')
+            <motion.li variants={itemVariants}  onClick={(e)=> {
+              
               setMenu(!menu)
             }
             }>About</motion.li>
-            <motion.li variants={itemVariants}  onClick={()=> {
-              scrollSmooth('pricing')
+            <motion.li variants={itemVariants}  onClick={(e)=> {
+              
               setMenu(!menu)
             }}>Pricing</motion.li>
-            <motion.li variants={itemVariants}   onClick={()=> {
-              scrollSmooth('whyus')
+            <motion.li variants={itemVariants}   onClick={(e)=> {
+              
               setMenu(!menu)
             }}>Why Us?</motion.li>
-            <motion.li variants={itemVariants}   onClick={()=> {
-              scrollSmooth('faq')
+            <motion.li variants={itemVariants}   onClick={(e)=> {
+              setMyRef4(true)
               setMenu(!menu)
             }}>FAQ</motion.li>
           </motion.ul>
@@ -185,10 +142,10 @@ export default function Header () {
       </div>
       <Headlines/>
       <Review/>
-      <About ref={myRef1}/>
-      <Pricing ref={myRef2}/>
-      <Whyus ref={myRef3}/>
-      <FAQ ref={myRef4}/>
+      <About refe={myRef1}/>
+      <Pricing refe={myRef2}/>
+      <Whyus refe={myRef3}/>
+      <FAQ refe={myRef4}/>
       <Footer/>
     </>
   );

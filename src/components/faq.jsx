@@ -40,12 +40,22 @@ function reducer(state, action) {
   }
 }
 
-export default function FAQ (){
+const FAQ = (myRef4)=>{
   console.log(multiObject, "before useReducer")
   const [state, dispatch] = React.useReducer(reducer, multiObject);
   console.log("state",state);
+  console.log("myRef4", myRef4.refe)
+  const myRef= React.createRef()
+  if (myRef4.refe == true){
+    console.log("if condition", myRef4.refe)
+    console.log("myRef", myRef)
+    myRef.current.scrollIntoView({
+      behavior: "smooth",
+      block:"start"
+    });
+  }
   return (
-    <div className='faq'>
+    <div ref={myRef} className='faq'>
       <div className='faq-head'>Frequently Asked Questions</div>
       <div className='faq-questions'>
         {
@@ -66,3 +76,5 @@ export default function FAQ (){
     </div>
   );
 };
+
+export default FAQ;

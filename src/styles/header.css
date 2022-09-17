@@ -76,6 +76,7 @@
     background-color: #FFD06D;
     gap: 3rem;
     padding: 0rem;
+    cursor:pointer;
 }
 li{
     list-style: none;
