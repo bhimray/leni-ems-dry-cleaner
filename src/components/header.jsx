@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {Link} from 'react-scroll'
 import '../styles/header.css'
 import {motion, useAnimation} from "framer-motion"
 import menuUnfold from '../images/menu-unfold.svg'
@@ -120,32 +121,28 @@ export default function Header () {
             }
           }}
           className={menu? "no-drop-down":"drop-down"}>
-            <motion.li variants={itemVariants}  onClick={(e)=> {
-              
+            <Link to="about" span={true} smooth={true}><motion.li variants={itemVariants}  onClick={(e)=> {
               setMenu(!menu)
             }
-            }>About</motion.li>
-            <motion.li variants={itemVariants}  onClick={(e)=> {
-              
+            }>About</motion.li></Link>
+            <Link to="pricing" span={true} smooth={true} offset={200}><motion.li variants={itemVariants}  onClick={(e)=> {
               setMenu(!menu)
-            }}>Pricing</motion.li>
-            <motion.li variants={itemVariants}   onClick={(e)=> {
-              
+            }}>Pricing</motion.li></Link>
+            <Link to="customer-review-head" smooth={true} offset={200}><motion.li variants={itemVariants}   onClick={(e)=> {
               setMenu(!menu)
-            }}>Why Us?</motion.li>
-            <motion.li variants={itemVariants}   onClick={(e)=> {
-              setMyRef4(true)
+            }}>Why Us?</motion.li></Link>
+            <Link to="faq-head"  smooth={true} offset={200}><motion.li variants={itemVariants}   onClick={(e)=> {
               setMenu(!menu)
-            }}>FAQ</motion.li>
+            }}>FAQ</motion.li></Link>
           </motion.ul>
         </motion.nav> 
       </div>
       <Headlines/>
       <Review/>
-      <About refe={myRef1}/>
-      <Pricing refe={myRef2}/>
-      <Whyus refe={myRef3}/>
-      <FAQ refe={myRef4}/>
+      <div id="about" ><About/></div>
+      <div id="pricing"><Pricing/></div>
+      <Whyus id="whyus"/>
+      <FAQ/>
       <Footer/>
     </>
   );
