@@ -11,6 +11,7 @@ import Headlines from './headlines';
 import Pricing from './pricing';
 import Review from './review';
 import Whyus from './why-us';
+import Refer from './refer';
   
 
 const itemVariants={
@@ -37,7 +38,7 @@ const itemVariants={
 // const myRef8 = React.createRef();
 
 export default function Header () {
-  const [myRef4, setMyRef4] = React.useState(false)
+  // const [myRef4, setMyRef4] = React.useState(false)
   const [scrolled, setScrolled] = React.useState(false)
   const [menu, setMenu] = React.useState(true)
   React.useEffect(()=>{
@@ -143,6 +144,7 @@ export default function Header () {
       <Headlines/>
       <Review/>
       <About/>
+      <Refer/>
       <Pricing/>
       <Whyus/>
       <FAQ/>

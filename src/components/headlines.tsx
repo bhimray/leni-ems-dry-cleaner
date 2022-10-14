@@ -1,6 +1,7 @@
 import * as React from 'react';
 import '../styles/headlines.css'
 import womenBgRemoved from '../images/headlines-bg.png'
+// import OCTime from './OCTime';
 export interface  HeadlinesProps {
 }
 

@@ -1,6 +1,12 @@
 .App {
   position:relative;
 }
+.clock{
+  position: sticky;
+  top:5rem;
+  left:0rem;
+  z-index:99;
+}
 
 .stroke-text{
   color:transparent;

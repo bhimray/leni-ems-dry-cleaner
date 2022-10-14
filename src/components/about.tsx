@@ -4,6 +4,7 @@ import twelve from '../images/12.svg'
 import cloth from '../images/cloth.svg'
 import bowlCloth from '../images/bowl-cloth.png'
 import receptionist from '../images/receptionist.jpg'
+// import OCTime from './OCTime';
 export interface AboutProps {
 }
 

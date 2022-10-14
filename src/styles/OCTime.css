@@ -1,0 +1,41 @@
+.openingTime{
+    position:relative;
+    top:1rem;
+    right: 0rem;
+    display:flex;
+    gap:0.5rem;
+    background-color: var(--caloryCard);
+    padding:0.5rem;
+    border-radius: 0.5rem;
+    width:fit-content;
+    height: 5rem;
+    /* z-index: 99999; */
+}
+
+.morningTime ,.eveningTime{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #605858c2;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+.range{
+    height: 1.2rem;
+    width: 3rem;
+    border-radius: 5rem;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    padding:0.1rem;
+}
+.toggleBar{
+    position:relative;
+    height: 1rem;
+    width:1rem;
+    border-radius: 50%;
+    background-color: yellow;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
