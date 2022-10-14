@@ -31,7 +31,7 @@ export default function Pricing (props:  PricingProps) {
                     </>
                   )
                 })}</span>
-                <div className='card-price'>{data.price}</div>            
+                {/* <div className='card-price'>{data.price}</div>             */}
               </motion.div>
             )
           })}
@@ -39,9 +39,9 @@ export default function Pricing (props:  PricingProps) {
       </div>
       <div>
       </div>
-      <div className='btn-div'>
+      {/* <div className='btn-div'>
         <button className='priceButton btn'>See all prices</button>
-      </div>
+      </div> */}
     </div>
   );
 }

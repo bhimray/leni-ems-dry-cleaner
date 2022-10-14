@@ -53,6 +53,7 @@
     border: 0.1rem double gold;
     border-radius: 0.5rem;
 }
+
 @media only screen and (min-width: 700px) {
     .about-head{
         display: flex;

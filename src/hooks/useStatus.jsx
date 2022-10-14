@@ -27,14 +27,20 @@ export const useStatus = () => {
     const position= `${((time <= (9*60 +30) && time>=(6*60+30)) && "open") || ((time >= (17*60+30) && time<=(19*60+30)) && "open") || ("close")}`;
     console.log("position", position, timeOriginal, time);
 
-    const morning=(time <= (9*60 +30) && time>=(6*60+30)) ? true:false;
-    const evening=(time >= (17*60+30) && time<=(19*60+30)) ? true:false;
+    const morningGym=(time <= (9*60 +30) && time>=(6*60+30)) ? true:false;
+    const eveningGym=(time >= (17*60+30) && time<=(19*60+30)) ? true:false;
+    //
+    //for shop, store and other day shop
+    const mondayToFridayOpening=(time >= (7*60) && time<=(19*60)) ? true:false;
+    const saturdayOpening=(time >= (7*60) && time<=(18*60)) ? true:false;
 
     return {
     //   date,
       time,
       timeOriginal,
-      morning,
-      evening,
+      morningGym,
+      eveningGym,
+      mondayToFridayOpening,
+      saturdayOpening
     };
   };

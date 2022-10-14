@@ -1,15 +1,21 @@
-.openingTime{
-    position:relative;
-    top:1rem;
-    right: 0rem;
-    display:flex;
-    gap:0.5rem;
-    background-color: var(--caloryCard);
-    padding:0.5rem;
+.openingTime {
+    /* position: relative; */
+    /* top: 1rem; */
+    /* right: 0rem; */
+    display: flex;
+    gap: 0.5rem;
+    background-color: #60585871;
+    /* padding: 0.5rem; */
     border-radius: 0.5rem;
-    width:fit-content;
-    height: 5rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    /* height: 5rem; */
     /* z-index: 99999; */
+    font-weight: 700;
+}
+.timeContainer {
+    position: absolute;
+    right: 0rem;
 }
 
 .morningTime ,.eveningTime{
@@ -22,12 +28,13 @@
 }
 .range{
     height: 1.2rem;
-    width: 3rem;
+    width: 4rem;
     border-radius: 5rem;
     background-color: orange;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding:0.1rem;
+    padding:0.2rem;
 }
 .toggleBar{
     position:relative;
@@ -38,4 +45,11 @@
     display:flex;
     justify-content: center;
     align-items: center;
+}
+.showStatus{
+    position:relative;
+}
+
+@media only screen and (min-width: 700px) {
+    
 }

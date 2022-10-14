@@ -1,13 +1,12 @@
 .App {
   position:relative;
 }
-.clock{
+.clock {
   position: sticky;
-  top:5rem;
-  left:0rem;
-  z-index:99;
+  top: 6.5rem;
+  /* left: 48rem; */
+  z-index: 99;
 }
-
 .stroke-text{
   color:transparent;
   -webkit-text-stroke-width:1.5px;

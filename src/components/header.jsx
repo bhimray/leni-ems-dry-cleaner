@@ -96,6 +96,13 @@ export default function Header () {
           <motion.div  animate={moveShadow}className='logo-shadow'></motion.div>
           {menu ? <Nav onClick = {()=>{setMenu(!menu); console.log(menu,'inline menu true position')}}/> :<img src={menuUnfold} onClick = {()=>{setMenu(!menu); console.log(menu,'inline menu false position')}} className='menu'/>}
         </div>
+        <div className="largeScreenNav">
+            <Link to="about" span={true} smooth={true}><li variants={itemVariants}>About</li></Link>
+            <Link to="pricing" span={true} smooth={true} ><li variants={itemVariants}>Pricing</li></Link>
+            <Link to="customer-review-head" span={true} smooth={true} ><li variants={itemVariants}>Why Us?</li></Link>
+            <Link to="faq-head" span={true} smooth={true} ><li variants={itemVariants}>FAQ</li></Link>
+            <Link to="pageFooter" span={true} smooth={true} ><li variants={itemVariants}>Contact Us</li></Link>
+        </div>
         <motion.nav 
         initial={false}
         animate={menu? 'closed':'open'}

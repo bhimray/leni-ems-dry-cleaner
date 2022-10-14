@@ -1,3 +1,4 @@
+
 .refer-bg {
     background-repeat: no-repeat;
     background-attachment:local;
@@ -17,9 +18,22 @@
     background-color: #03092e;
     padding: 1.5rem;
 }
+.refer-head-services{
+    color: #ffd06d !important;
+}
 .refer-body {
-    color: burlywood;
+    color: #ffd06d;
     display: grid !important;
-    text-align: start;
+    /* text-align: start; */
     background: linear-gradient(93deg, #03092e, #171946, #2331d5, #23d5ab00);
+    mix-blend-mode: luminosity;
+}
+
+.listIcon{
+    width:2rem;
+}
+.numberingList{
+    display: flex;
+    justify-content: center;
+    gap:0.2rem;
 }

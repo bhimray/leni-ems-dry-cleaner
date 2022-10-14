@@ -1,7 +1,5 @@
 .us-nav {
     display: grid;
-    /* align-items: center; */
-    /* flex-direction: row; */
     background: #0890F1;
     color: #FFFFFF;
     padding: 40px 50px;
@@ -58,6 +56,9 @@
 .nav{
     position: absolute;
 }
+.largeScreenNav{
+    display:none;
+}
 .no-drop-down{
     display: none;
 }
@@ -81,4 +82,36 @@
 }
 li{
     list-style: none;
+}
+@media only screen and (min-width: 700px) {
+    .largeScreenNav {
+        display: flex;
+        gap: 3rem;
+        font-weight: 700;
+        color: maroon;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+    .largeScreenNav> a{
+        padding:0.5rem;
+    }
+    .largeScreenNav> a:hover{
+        outline: black solid 0.1rem;
+        border-radius: 10%;
+    }
+    .nav, .menu{
+        display: none;
+    }
+    .us-nav {
+        display: flex;
+        padding: 20px 50px;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        justify-content: space-between;
+        align-items: center;
+        /* gap:5rem; */
+
+    }
 }

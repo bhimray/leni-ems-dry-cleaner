@@ -4,6 +4,7 @@ import twelve from '../images/12.svg'
 import cloth from '../images/cloth.svg'
 import bowlCloth from '../images/bowl-cloth.png'
 import receptionist from '../images/receptionist.jpg'
+import deliveryVan from '../images/delivery.png'
 // import OCTime from './OCTime';
 export interface AboutProps {
 }
@@ -32,7 +33,7 @@ export default function About (props: AboutProps) {
           </div>
           <div className='listItem'>
             <img src={cloth} alt="" className='twelve'/>
-            <div>Dedicate for 24/7</div>
+            <div>Dedicate for Quality Service</div>
           </div>
         </div>
       </div>
@@ -49,6 +50,13 @@ export default function About (props: AboutProps) {
           <div className='about-head-service'>If you want to give us some instructions or need to change some thing. We are always here to listen you and assit you through our online support.</div>
         </div>      
         <img src={receptionist} alt="" className='service-image' />
+      </div>
+      <div className='about-head'>
+        <div>
+          <div>Same day pick up</div>
+          <div className='about-head-service'>Drop your clothes before 9am and pick up on the same day</div>
+        </div>      
+        <img src={deliveryVan} alt="" className='service-image' />
       </div>
     </div>
   );
