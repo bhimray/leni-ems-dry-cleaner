@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {Link} from 'react-scroll'
 import '../styles/header.css'
 import {motion, useAnimation} from "framer-motion"
 import menuUnfold from '../images/menu-unfold.svg'
@@ -10,6 +11,7 @@ import Headlines from './headlines';
 import Pricing from './pricing';
 import Review from './review';
 import Whyus from './why-us';
+import Refer from './refer';
   
 
 const itemVariants={
@@ -26,17 +28,17 @@ const itemVariants={
 };
 
 
-const myRef1 = React.createRef();
-const myRef2 = React.createRef();
-const myRef3 = React.createRef();
-// const myRef4 = React.createRef();
-const myRef5 = React.createRef();
-const myRef6 = React.createRef();
-const myRef7 = React.createRef();
-const myRef8 = React.createRef();
+// const myRef1 = React.createRef();
+// const myRef2 = React.createRef();
+// const myRef3 = React.createRef();
+// // const myRef4 = React.createRef();
+// const myRef5 = React.createRef();
+// const myRef6 = React.createRef();
+// const myRef7 = React.createRef();
+// const myRef8 = React.createRef();
 
 export default function Header () {
-  const [myRef4, setMyRef4] = React.useState(false)
+  // const [myRef4, setMyRef4] = React.useState(false)
   const [scrolled, setScrolled] = React.useState(false)
   const [menu, setMenu] = React.useState(true)
   React.useEffect(()=>{
@@ -94,6 +96,13 @@ export default function Header () {
           <motion.div  animate={moveShadow}className='logo-shadow'></motion.div>
           {menu ? <Nav onClick = {()=>{setMenu(!menu); console.log(menu,'inline menu true position')}}/> :<img src={menuUnfold} onClick = {()=>{setMenu(!menu); console.log(menu,'inline menu false position')}} className='menu'/>}
         </div>
+        <div className="largeScreenNav">
+            <Link to="about" span={true} smooth={true}><li variants={itemVariants}>About</li></Link>
+            <Link to="pricing" span={true} smooth={true} ><li variants={itemVariants}>Pricing</li></Link>
+            <Link to="customer-review-head" span={true} smooth={true} ><li variants={itemVariants}>Why Us?</li></Link>
+            <Link to="faq-head" span={true} smooth={true} ><li variants={itemVariants}>FAQ</li></Link>
+            <Link to="pageFooter" span={true} smooth={true} ><li variants={itemVariants}>Contact Us</li></Link>
+        </div>
         <motion.nav 
         initial={false}
         animate={menu? 'closed':'open'}
@@ -120,32 +129,32 @@ export default function Header () {
             }
           }}
           className={menu? "no-drop-down":"drop-down"}>
-            <motion.li variants={itemVariants}  onClick={(e)=> {
-              
+            <Link to="about" span={true} smooth={true}><motion.li variants={itemVariants}  onClick={(e)=> {
               setMenu(!menu)
             }
-            }>About</motion.li>
-            <motion.li variants={itemVariants}  onClick={(e)=> {
-              
+            }>About</motion.li></Link>
+            <Link to="pricing" span={true} smooth={true} offset={200}><motion.li variants={itemVariants}  onClick={(e)=> {
               setMenu(!menu)
-            }}>Pricing</motion.li>
-            <motion.li variants={itemVariants}   onClick={(e)=> {
-              
+            }}>Pricing</motion.li></Link>
+            <Link to="customer-review-head" smooth={true} offset={200}><motion.li variants={itemVariants}   onClick={(e)=> {
               setMenu(!menu)
-            }}>Why Us?</motion.li>
-            <motion.li variants={itemVariants}   onClick={(e)=> {
-              setMyRef4(true)
+            }}>Why Us?</motion.li></Link>
+            <Link to="faq-head"  smooth={true} offset={200}><motion.li variants={itemVariants}   onClick={(e)=> {
               setMenu(!menu)
-            }}>FAQ</motion.li>
+            }}>FAQ</motion.li></Link>
+            <Link to="pageFooter"  smooth={true} offset={200}><motion.li variants={itemVariants}   onClick={(e)=> {
+              setMenu(!menu)
+            }}>Contact Us</motion.li></Link>
           </motion.ul>
         </motion.nav> 
       </div>
       <Headlines/>
       <Review/>
-      <About refe={myRef1}/>
-      <Pricing refe={myRef2}/>
-      <Whyus refe={myRef3}/>
-      <FAQ refe={myRef4}/>
+      <About/>
+      <Refer/>
+      <Pricing/>
+      <Whyus/>
+      <FAQ/>
       <Footer/>
     </>
   );

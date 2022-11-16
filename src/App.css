@@ -1,7 +1,12 @@
 .App {
   position:relative;
 }
-
+.clock {
+  position: sticky;
+  top: 6.5rem;
+  /* left: 48rem; */
+  z-index: 99;
+}
 .stroke-text{
   color:transparent;
   -webkit-text-stroke-width:1.5px;
@@ -48,4 +53,11 @@
   border-radius:5%;
   color:rgb(219, 215, 215);
   box-shadow: 0px 0px 6px 0px #5100ff;
+}
+
+.messenger{
+  position:fixed;
+  bottom:0rem;
+  left:0rem;
+
 }

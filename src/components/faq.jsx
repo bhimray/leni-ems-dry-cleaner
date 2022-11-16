@@ -39,23 +39,17 @@ function reducer(state, action) {
       throw new Error();
   }
 }
+// const myRef= React.createRef()//always create outside the function
 
-const FAQ = (myRef4)=>{
+const FAQ = ()=>{
   console.log(multiObject, "before useReducer")
   const [state, dispatch] = React.useReducer(reducer, multiObject);
   // console.log("state",state);
-  console.log("myRef4", myRef4.refe)
-  const myRef= React.createRef()
-  if (myRef4.refe == true){
-    console.log("if condition", myRef4.refe)
-    console.log("myRef", myRef)
-    myRef.current.scrollIntoView({
-      behavior: "smooth",
-      block:"start"
-    });
-  }
+  // console.log("myRef4", myRef4.refe)
+  
+  
   return (
-    <div ref={myRef} className='faq'>
+    <div  className='faq' >
       <div className='faq-head'>Frequently Asked Questions</div>
       <div className='faq-questions'>
         {

@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import Header from './components/header'
+import MessengerChat from './components/messenger-chat';
+import OCTime from './components/OCTime';
 
 // class Scroll extends React.Component {
 //   constructor(props) {
@@ -86,8 +88,12 @@ function App() {
   console.log("app underline", underline)
 
   return (
-    <div>
+    <div className='App'>
+      <div className="clock">
+        <OCTime/>
+      </div>
       <Header/>
+      <MessengerChat/>
     </div>
   );
 }
